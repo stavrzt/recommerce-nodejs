@@ -2,6 +2,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var dotenv = require('dotenv').config();
+var mongoose = require('mongoose');
+
+mongoose
+    .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('DB Connected!'))
+    .catch(err => {
+        console.log('DB Connection Error: ' + err.message);
+    });
 
 var indexRouter = require('./routes/index');
 
@@ -16,7 +25,7 @@ app.use(cookieParser());
 // set static dir
 app.use(express.static(path.join(__dirname, 'public')));
 
-// routes
-app.use('/', indexRouter);
+// routers
+app.use('/api', indexRouter);
 
 module.exports = app;
