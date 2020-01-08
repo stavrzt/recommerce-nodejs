@@ -39,6 +39,10 @@ var categoriesTestDataArray = [
     }),
 ];
 
+module.exports.getAllCategories = function (callback) {
+    Category.find(callback);
+};
+
 // Add test data array to DB
 // Category.insertMany(categoriesTestDataArray, (err, categories) => {
 //     if (err) throw err;

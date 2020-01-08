@@ -16,4 +16,17 @@ router.get('/products', function(req, res, next) {
   });
 });
 
+/* GET all categories */
+router.get('/categories', function(req, res, next) {
+  Category.getAllCategories(function (err, categories) {
+    if (err) next(err);
+
+    if (categories.length < 1) {
+      return res.status(404).json({ message: "Categories not found" })
+    }
+
+    res.json(categories);
+  });
+});
+
 module.exports = router;
