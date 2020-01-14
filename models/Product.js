@@ -22,7 +22,7 @@ let productSchema = mongoose.Schema({
     size: {
         type: String
     },
-    imageSrc: {
+    imagesrc: {
         type: String
     }
 });
@@ -39,7 +39,7 @@ const productsTestDataArray = [
         quantity: 15,
         color: "red",
         size: "xl",
-        imageSrc: "/public/images/test-image.png"
+        imagesrc: "/public/images/test-image.png"
     }),
     new Product({
         name: 'Ringer T-Shirt',
@@ -49,7 +49,7 @@ const productsTestDataArray = [
         quantity: 60,
         color: "red",
         size: "xl",
-        imageSrc: "/public/images/test-image.png"
+        imagesrc: "/public/images/test-image.png"
     }),
     new Product({
         name: 'Short Sleeve Baseball T-Shirt',
@@ -59,7 +59,7 @@ const productsTestDataArray = [
         quantity: 80,
         color: "red",
         size: "xl",
-        imageSrc: "/public/images/test-image.png"
+        imagesrc: "/public/images/test-image.png"
     }),
     new Product({
         name: 'Raglan Sweatshirt',
@@ -69,7 +69,7 @@ const productsTestDataArray = [
         quantity: 70,
         color: "red",
         size: "xl",
-        imageSrc: "/public/images/test-image.png"
+        imagesrc: "/public/images/test-image.png"
     }),
     new Product({
         name: 'Set-In Sweatshirt',
@@ -79,7 +79,7 @@ const productsTestDataArray = [
         quantity: 80,
         color: "red",
         size: "xl",
-        imageSrc: "/public/images/test-image.png"
+        imagesrc: "/public/images/test-image.png"
     }),
     new Product({
         name: 'Zip Neck Sweat',
@@ -89,7 +89,7 @@ const productsTestDataArray = [
         quantity: 99,
         color: "red",
         size: "xl",
-        imageSrc: "/public/images/test-image.png"
+        imagesrc: "/public/images/test-image.png"
     })
 ];
 
