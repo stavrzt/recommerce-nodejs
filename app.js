@@ -38,8 +38,6 @@ app.use('/api/user', userRouter);
 // will print stacktrace
 if (!isProduction) {
     app.use(function (err, req, res, next) {
-        console.log(123123123);
-
         typeof err.stack !== 'undefined' && console.log(err.stack);
 
         res.status(err.status || 500);
